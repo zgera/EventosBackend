@@ -31,10 +31,9 @@ authRouter.post("/signup", async (req: Request, res: Response) => {
                 sameSite: "strict",
                 maxAge: 1000 * 60 * 60, // 1 hora
             })
-            .status(200)
-            .send({ user });
+            .status(201)
+            .send({ user }); 
 
-        res.status(201).send({ user });
     } catch (error) {
         const message = error instanceof Error ? error.message : "Error inesperado al registrarse";
         res.status(401).send({ error: message });

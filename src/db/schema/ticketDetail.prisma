@@ -6,6 +6,6 @@ model TicketDetail{
     lastName String
     document Int
     amount Int
-    event Event @relation(fields: [eventID], references: [idEvent])
+    event Event @relation(fields: [eventID], references: [idEvent], onDelete: Cascade)
     ticket Ticket @relation(fields: [ticketID], references: [idTicket], onDelete: Cascade)
 }

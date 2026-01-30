@@ -49,33 +49,11 @@ export class EventRepository {
         })
     }
 
-/*     static async deleteEvent(idEvent: string): Promise<Event> {
+    static async deleteEvent(idEvent: string): Promise<Event> {
         const event = await db.event.delete({
             where: { idEvent }
         });
         return event;
-    } */
-
-    static async deleteEvent(idEvent: string): Promise<Event> {
-            await db.ticketDetail.deleteMany({
-                where: {
-                    eventID: idEvent
-                }
-            });
-
-            await db.ticket.deleteMany({
-                where: {
-                    idEvent: idEvent
-                }
-            });
-
-            const deletedEvent = await db.event.delete({
-                where: {
-                    idEvent: idEvent
-                }
-            });
-
-            return deletedEvent;
     }
 
     static async completeEvent(idEvent: string): Promise<Event> {

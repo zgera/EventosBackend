@@ -1,6 +1,4 @@
-Integrantes: Joaquin Fernandenz y Valentin Gerakios
-
-Instrucciones para compilar el codigo:
+ Backend de un sistema diseñado para acceder y publicar eventos sociales. Ofrece la posibilidad de organizar eventos visibles ante los demas usuarios del sistema para que puedan asistir. Asi mismo, cada usuario puede decidir asistir a eventos ajenos, que pueden ser tanto gratuitos como pagos. 
 
 1) Instalar librerias
      npm install
